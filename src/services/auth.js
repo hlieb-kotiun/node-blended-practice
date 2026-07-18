@@ -41,3 +41,9 @@ export const setCookies = (res, session) => {
     maxAge: THIRTY_DAYS,
   });
 };
+
+export const clearCookies = (res) => {
+  res.clearCookie('accessToken');
+  res.clearCookie('refreshToken');
+  res.clearCookie('sessionId');
+};
